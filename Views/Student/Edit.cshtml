@@ -1,0 +1,30 @@
+﻿@model CRUDOFSTUDENT.Models.Entities.Student
+
+<h2>Edit student Details</h2>
+
+<form asp-action="Edit" method="post">
+
+    <div class="mt-3">
+        <label asp-for="Name"class="form-label">Name
+        </label>
+        <input asp-for="Name" class="form-control" />
+        
+    </div>
+    <div class="mt-3">
+        <label asp-for="Email" class="form-label">
+            Emai
+        </label>
+        <input asp-for="Email" class="form-control" />
+
+    </div>
+    <div class="mt-3">
+        <label asp-for="Phone" class="form-label">
+            Phone
+        </label>
+        <input asp-for="Phone" class="form-control" />
+
+
+    </div>
+    <button type="submit" class="btn btn-primary">save</button>
+     <button type="submit" class="btn btn-primary">Back</button>
+</form>

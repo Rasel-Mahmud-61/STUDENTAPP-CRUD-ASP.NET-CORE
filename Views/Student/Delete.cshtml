@@ -1,0 +1,15 @@
+﻿@model CRUDOFSTUDENT.Models.Entities.Student
+
+<h1>Delete Student</h1>
+
+<div>
+    <h4>@Model.Name</h4>
+    <p>Email: @Model.Email</p>
+    <p>Phone: @Model.Phone</p>
+</div>
+
+<form asp-action="DeleteConfirmed" asp-controller="Student" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

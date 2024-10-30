@@ -1,0 +1,51 @@
+﻿
+
+
+
+<div class="row">
+     <div class="col-6">
+         Display all student
+     </div>
+     <div class="col-6" mt-2>
+         <form asp-controller="Student" asp-action="Add" method="get">
+                <button type="submit" class="btn btn-primary">
+                        AddStudent
+                    </button>
+         </form>
+      
+     </div>
+</div>
+
+<table class="table table-bordered">
+
+    <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th> Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Phone</td>
+             <td>
+                 <a asp-controller="Student" asp-action="Edit" asp-route-id="@student.Id" class="btn btn-warning">Edit</a>
+             </td>
+               <td>
+                 <a asp-controller="Student" asp-action="Delete" asp-route-id="@student.Id" class="btn btn-warning">Delete</a>
+             </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>

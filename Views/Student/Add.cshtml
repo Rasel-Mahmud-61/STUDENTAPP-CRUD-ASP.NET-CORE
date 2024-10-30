@@ -1,0 +1,40 @@
+﻿@model CRUDOFSTUDENT.Models.Entities.Student
+
+<h2>add student into the table</h2>
+
+<form asp-action="Add" method="post">
+
+
+    <div class="mt-3">
+
+        <label class="form-label">Name</label>
+        <input asp-for="Name" type="text" class="form-control"/>
+        <span asp-validation-for="Name" class="text-danger">
+
+        </span>
+
+    </div>
+
+    <div class="mt-3">
+
+        <label class="form-label">Email</label>
+        <input asp-for="Email" type="email" class="form-control">
+         <span asp-validation-for="Email" class="text-danger">
+        </span>
+    </div>
+    <div class="mt-3">
+
+        <label class="form-label">Phone</label>
+        <input asp-for="Phone" type="text" class="form-control">
+         <span asp-validation-for="Phone" class="text-danger">
+        </span>
+    </div>
+
+    <button type="submit" class="btn mt-3 btn-primary">Add Student</button>
+
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
